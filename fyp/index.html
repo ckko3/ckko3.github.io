@@ -1,0 +1,63 @@
+<html>
+    <head>
+	<title>Welcome to this Survey!</title>
+      <style>
+         body
+         {
+            font-size: 24px;
+            text-align: center;
+            line-height: 35px;
+            background-image: url("music-rainbow.jpg");
+         }
+
+         div {
+            background-color: white;
+            color: brown;
+            display: inline-block; padding: 8px;
+	        border: blue solid 5px;
+         }
+
+      </style>
+      <script>
+	var link = "";
+
+         function load()
+         {
+            var min = 1;
+            var max = 3;
+            var num = Math.floor((Math.random() * max) + min);
+
+            if (num == 1)
+            {
+               link = "http://yahoo.com.hk/";
+            }
+            else if (num == 2)
+            {
+   	       link = "http://google.com/";
+            }
+            else if (num == 3)
+            {
+   	       link = "http://youtube.com/";
+            }
+         }
+
+         function go()
+         {
+            window.location = link;
+         }
+      </script>
+    </head>
+    <body onload="load();">
+        
+		<div>
+            <h1 style="color:purple;">Online Recommendation System</h1>
+			<hr />
+			<p><b>We are conducting a FYP survey on Song Recommendation System.<br />
+            This survey aims at capturing your feedback for analysis.<br />
+            Click <button onclick="go();">HERE</button> to generate a survey.<br />
+            Thanks so much for your help :) </b></p>
+			<p style="font-size:80%; color:black"><em>*Your personal information will be kept strictly confidential*</em></p>
+        </div>
+        
+    </body>
+</html>
